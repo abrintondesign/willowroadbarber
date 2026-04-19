@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://willowroadbarber.ca/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://willowroadbarber.ca/images/willow-road-barbershop-barber-cutting-hair-guelph.webp</image:loc>
+      <image:caption>Barber cutting a customer's hair at Willow Road Barber Shop in Guelph, Ontario</image:caption>
+      <image:title>Willow Road Barber Shop — Guelph</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://willowroadbarber.ca/images/willow-road-barbershop-interior-guelph.webp</image:loc>
+      <image:caption>Interior of Willow Road Barber Shop in Guelph</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://willowroadbarber.ca/images/willow-road-barbershop-storefront-window-sunset.webp</image:loc>
+      <image:caption>Willow Road Barber Shop storefront at sunset, 59 Willow Road, Guelph</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://willowroadbarber.ca/images/mens-modern-mullet-willow-road-barbershop.webp</image:loc>
+      <image:caption>Modern mullet haircut at Willow Road Barber Shop, Guelph</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://willowroadbarber.ca/images/mens-skin-fade-willow-road-barbershop-guelph.webp</image:loc>
+      <image:caption>Men's skin fade haircut at Willow Road Barber Shop, Guelph</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://willowroadbarber.ca/images/kids-textured-mullet-hair-design-guelph.webp</image:loc>
+      <image:caption>Kids' textured mullet haircut with hair design at Willow Road Barber Shop, Guelph</image:caption>
+    </image:image>
+  </url>
+</urlset>

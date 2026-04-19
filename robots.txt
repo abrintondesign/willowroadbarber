@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /.git/
+Disallow: /.github/
+
+# AI scraper opt-out — uncomment to block
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
+
+Sitemap: https://willowroadbarber.ca/sitemap.xml
+Host: https://willowroadbarber.ca
