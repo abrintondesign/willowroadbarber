@@ -421,7 +421,7 @@
     </div>
   </div>
 
-  <!-- View More Work button -->
+  <!-- View More button -->
   <div class="gallery-expand-row reveal-up reveal-delay-2">
     <button class="gallery-more-btn" id="galleryMoreBtn"
             aria-expanded="false" aria-controls="gallerySecondary">
@@ -537,36 +537,6 @@
               aria-label="Open image: Haircut result">
         <img src="images/haircut-result-willow-road-barbershop-9.webp"
              alt="Finished haircut result at Willow Road Barber Shop in Guelph"
-             loading="lazy" />
-      </figure>
-
-      <!-- Shop atmosphere — secondary context -->
-
-      <figure class="g-item g-item--clickable" tabindex="0" role="button"
-              aria-label="Open image: Barber scissors">
-        <img src="images/barber-scissors-willow-road-barbershop.webp"
-             alt="Professional barber scissors at Willow Road Barber Shop in Guelph"
-             loading="lazy" />
-      </figure>
-
-      <figure class="g-item g-item--clickable" tabindex="0" role="button"
-              aria-label="Open image: Barber chair detail">
-        <img src="images/barber-chair-footrest-sneakers.webp"
-             alt="Classic barber chair at Willow Road Barber Shop in Guelph"
-             loading="lazy" />
-      </figure>
-
-      <figure class="g-item g-item--clickable" tabindex="0" role="button"
-              aria-label="Open image: Shop interior">
-        <img src="images/willow-road-barbershop-interior-wide-guelph.webp"
-             alt="Interior of Willow Road Barber Shop in Guelph"
-             loading="lazy" />
-      </figure>
-
-      <figure class="g-item g-item--clickable" tabindex="0" role="button"
-              aria-label="Open image: Shop wall art">
-        <img src="images/barbershop-wall-art-mobster-characters.webp"
-             alt="Vintage wall art inside Willow Road Barber Shop in Guelph"
              loading="lazy" />
       </figure>
 
@@ -921,6 +891,27 @@
       requestAnimationFrame(function () { heroBg.classList.add('loaded'); });
     }
 
+    // ── Gallery expand ────────────────────────────────────────
+    var moreBtn   = document.getElementById('galleryMoreBtn');
+    var secondary = document.getElementById('gallerySecondary');
+
+    if (moreBtn && secondary) {
+      moreBtn.addEventListener('click', function () {
+        var isOpen = secondary.classList.contains('is-open');
+        if (isOpen) {
+          secondary.classList.remove('is-open');
+          secondary.setAttribute('aria-hidden', 'true');
+          moreBtn.setAttribute('aria-expanded', 'false');
+          moreBtn.querySelector('.gallery-more-label').textContent = 'View More Work';
+        } else {
+          secondary.classList.add('is-open');
+          secondary.setAttribute('aria-hidden', 'false');
+          moreBtn.setAttribute('aria-expanded', 'true');
+          moreBtn.querySelector('.gallery-more-label').textContent = 'Show Less';
+        }
+      });
+    }
+
     // ── Active-nav highlighting ───────────────────────────────
     var sections = document.querySelectorAll('main section[id]');
     var navLinks = document.querySelectorAll('.header-nav a');
@@ -963,26 +954,6 @@
       });
     }
 
-    // ── Gallery expand ("View More Work") ─────────────────────
-    var moreBtn   = document.getElementById('galleryMoreBtn');
-    var secondary = document.getElementById('gallerySecondary');
-
-    if (moreBtn && secondary) {
-      moreBtn.addEventListener('click', function () {
-        var isOpen = secondary.classList.contains('is-open');
-        if (isOpen) {
-          secondary.classList.remove('is-open');
-          secondary.setAttribute('aria-hidden', 'true');
-          moreBtn.setAttribute('aria-expanded', 'false');
-          moreBtn.querySelector('.gallery-more-label').textContent = 'View More Work';
-        } else {
-          secondary.classList.add('is-open');
-          secondary.setAttribute('aria-hidden', 'false');
-          moreBtn.setAttribute('aria-expanded', 'true');
-          moreBtn.querySelector('.gallery-more-label').textContent = 'Show Less';
-        }
-      });
-    }
 
     // ── Lightbox ──────────────────────────────────────────────
     var lbOverlay = document.getElementById('lbOverlay');
