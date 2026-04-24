@@ -1,52 +1,40 @@
-# Smith-Dobrowsky Real Estate Team Site
+# Willow Road Barber Shop
 
-Modern static marketing site rebuild for a Burlington / Hamilton real estate team.
+Static marketing site for Willow Road Barber Shop — a classic neighbourhood barbershop at 59 Willow Road, Guelph, Ontario. Serving Guelph since the 1960s.
 
-## Proposed file structure
+**Live site:** [willowroadbarber.ca](https://willowroadbarber.ca)
+
+## File structure
 
 ```text
 .
-├── index.html
-├── buyers.html
-├── sellers.html
-├── listings.html
-├── about.html
-├── contact.html
-├── blog.html
-├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   └── js/
-│       └── site.js
-├── components/
-│   ├── header/
-│   │   └── header.html
-│   ├── hero/
-│   │   └── hero.html
-│   ├── trust-strip/
-│   │   └── trust-strip.html
-│   ├── service-cards/
-│   │   └── service-cards.html
-│   ├── listings-grid/
-│   │   ├── listings-grid.html
-│   │   └── property-card.html
-│   ├── testimonial-slider/
-│   │   ├── testimonial-slider.html
-│   │   └── testimonial.html
-│   ├── market-insights/
-│   │   └── market-insights.html
-│   ├── cta-section/
-│   │   └── cta-section.html
-│   └── footer/
-│       └── footer.html
+├── index.html          — Single-page site
+├── willow-v2.css       — Stylesheet
+├── 404.html            — Custom error page
 ├── robots.txt
 ├── sitemap.xml
-└── 404.html
+├── CNAME               — willowroadbarber.ca (GitHub Pages custom domain)
+├── wrb.webp            — Footer logo
+└── images/             — All site images (WebP)
 ```
 
-## Notes
+## Stack
 
-- Static HTML, CSS, and JS with no build step.
-- Shared styles and interactions live under `assets/`.
-- `components/` contains reusable reference snippets for future page assembly or CMS migration.
-- Representative content is tailored to Burlington, Hamilton, and surrounding Ontario markets.
+- Static HTML, CSS, and vanilla JS — no build step, no frameworks
+- Hosted on GitHub Pages with custom domain via Cloudflare
+- Fonts: Playfair Display + Inter (Google Fonts)
+
+## Sections
+
+1. Header — logo, nav, hours, call CTA
+2. Hero — full-bleed background, key stats, call + directions CTAs
+3. Trust strip — address, hours, walk-in, cash only, Google rating
+4. Services & Pricing — haircuts, beard & shave menu
+5. Gallery — 8 featured haircut photos + expandable secondary grid (14 more)
+6. About — shop history, Riccardo, four pillars
+7. Reviews — featured testimonial + two supporting cards, Google Reviews CTA
+8. Visit — address, hours, phone, directions
+
+## Built by
+
+[Brinton Builds](https://brintonbuilds.ca)
