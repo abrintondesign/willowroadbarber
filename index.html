@@ -57,8 +57,8 @@
   <!-- ── Fonts ───────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="willow-v2.css?v=20260422-2259" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Gloock&family=Inter+Tight:wght@400;500;600;700&family=Roboto+Condensed:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="willow-v2.css?v=20260510-footer" />
 
   <!-- ── Structured Data: LocalBusiness / BarberShop ─────────── -->
   <script type="application/ld+json">
@@ -200,9 +200,9 @@
         <p class="hero-eyebrow">Guelph's neighbourhood barber &nbsp;·&nbsp; Est. 1960s</p>
         <h1 class="hero-heading" id="hero-heading">
           <span class="hero-line hero-line--1">Walk in</span>
-          <span class="hero-line hero-line--2">Leave <span class="accent">sharp.</span></span>
+          <span class="hero-line hero-line--2">Leave <span class="accent">sharp</span></span>
         </h1>
-        <p class="hero-quote" style="font-style:italic;opacity:0.85;margin-bottom:0.4em;">&#8220;This is a barbershop, not a salon.&#8221;</p>
+        <p class="hero-quote">&#8220;This is a barbershop, not a salon.&#8221;</p>
         <p class="hero-sub">
           Walk in any time — 59 Willow Road, Guelph.
         </p>
@@ -241,7 +241,7 @@
   <div class="container">
     <div class="section-head reveal-up">
       <p class="eyebrow">Services &amp; Pricing</p>
-      <h2 class="section-title">Honest Prices<br>Have a Seat, <span class="accent">Handsome.</span></h2>
+      <h2 class="section-title">Have a Seat, <span class="accent">Handsome</span></h2>
     </div>
     <div class="services-layout reveal-up reveal-delay-1">
       <div>
@@ -523,47 +523,133 @@
    ABOUT
    ====================================================== -->
 <section id="about" class="about">
-  <div class="container">
-    <div class="about-img-wrap reveal-up">
-      <img src="images/willow-road-barbershop-interior-guelph.webp"
-           alt="Inside Willow Road Barber Shop in Guelph — barber at the chair, classic neighbourhood setting"
-           width="1200" height="1500"
+
+  <!-- LEFT: dark cinematic wall -->
+  <div class="about-cinema" aria-label="Photo wall — Willow Road Barber Shop">
+
+    <!-- Background: shop interior -->
+    <div class="about-wall" aria-hidden="true">
+      <img class="about-wall-img"
+           src="images/willow-road-barbershop-interior-guelph.webp"
+           alt="Interior of Willow Road Barber Shop in Guelph"
            loading="lazy" decoding="async" />
     </div>
-    <div class="about-copy reveal-up reveal-delay-1">
-      <p class="eyebrow">About the Shop</p>
-      <h2 class="section-title">Guelph's Classic<br><span class="accent">Barber Shop.</span></h2>
-      <div class="about-body">
-        <p>
-          Formerly known as Carlos Barber Shop, Willow Road has been a fixture
-          on this street since the 1960s. Riccardo runs it the same
-          way it's always been run — good work, honest prices, no nonsense.
-        </p>
-        <p>
-          Regulars have been coming for decades.
-          Pull up a chair. Coffee's on.
-        </p>
+
+    <!-- Polaroid: Tarun — larger, upper-left -->
+    <!-- Annotation is nested here so it tracks the photo at any viewport width -->
+    <div class="about-polaroid about-polaroid--tarun">
+      <div class="about-polaroid-photo">
+        <img src="images/tarun-profile-willow-road-barber-shop-guelph.webp"
+             alt="Tarun at Willow Road Barber Shop in Guelph"
+             loading="lazy" decoding="async" />
       </div>
-      <div class="about-pillars">
-        <div>
-          <div class="pillar-title">Great with Kids</div>
-          <div class="pillar-body">Patient service for first haircuts and nervous little ones.</div>
-        </div>
-        <div>
-          <div class="pillar-title">Classic Cuts</div>
-          <div class="pillar-body">Fades, tapers, line-ups and straight-razor finishes.</div>
-        </div>
-        <div>
-          <div class="pillar-title">No Appointment</div>
-          <div class="pillar-body">Walk in any time. No booking app, no waitlist.</div>
-        </div>
-        <div>
-          <div class="pillar-title">60+ Years Local</div>
-          <div class="pillar-body">Serving the same neighbourhood since the 1960s.</div>
-        </div>
+      <div class="about-polaroid-caption">
+        <span class="about-polaroid-name">Tarun</span>
+        <span class="about-polaroid-role">Elite Barber</span>
+      </div>
+      <div class="about-annot about-annot--tarun" aria-hidden="true">
+        <p class="about-annot-text">Precision<br><em>above</em><br><em>everything.</em></p>
+        <svg class="about-annot-arrow" width="52" height="44" viewBox="0 0 52 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 46 7 C 36 13 18 23 8 37" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M 8 37 L 3 29 M 8 37 L 17 34" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
       </div>
     </div>
+
+    <!-- Polaroid: Ricky — lower, center-right -->
+    <div class="about-polaroid about-polaroid--ricky">
+      <div class="about-polaroid-photo">
+        <img src="images/ricky-profile-at-work-willow-road-barbershop.webp"
+             alt="Ricky cutting hair at Willow Road Barber Shop"
+             loading="lazy" decoding="async" />
+      </div>
+      <div class="about-polaroid-caption">
+        <span class="about-polaroid-name">Ricky</span>
+        <span class="about-polaroid-role">Owner / Barber</span>
+      </div>
+    </div>
+
+    <!-- Annotation: Ricky -->
+    <div class="about-annot about-annot--ricky" aria-hidden="true">
+      <p class="about-annot-text">The man<br><em>behind</em><br>the chair.</p>
+      <svg class="about-annot-arrow about-annot-arrow--flip" width="52" height="44" viewBox="0 0 52 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 6 37 C 16 29 34 18 44 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M 44 6 L 48 14 M 44 6 L 36 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+    </div>
+
   </div>
+
+  <!-- RIGHT: editorial content panel -->
+  <div class="about-copy reveal-up reveal-delay-1">
+    <h2 class="section-title">Guelph's Classic<br><span class="accent">Barber Shop.</span></h2>
+    <div class="about-body">
+      <p>
+        Formerly known as Carlos Barber Shop, Willow Road has been a fixture
+        on this street since the 1960s. Riccardo runs it the same
+        way it's always been run — good work, honest prices, no nonsense.
+      </p>
+      <p>
+        Regulars have been coming for decades.
+        Pull up a chair. Coffee's on.
+      </p>
+    </div>
+    <div class="about-pillars">
+
+      <div class="about-pillar">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="8.5" r="5.5"/>
+            <path d="M2 24c0-5 4-8.5 9-8.5s9 3.5 9 8.5"/>
+            <circle cx="23" cy="10" r="4" opacity="0.75"/>
+            <path d="M19.5 24c0-3.5 1.5-6 3.5-7"/>
+          </svg>
+        </div>
+        <div class="pillar-title">Great with Kids</div>
+        <div class="pillar-body">Patient service for first haircuts and nervous little ones.</div>
+      </div>
+
+      <div class="about-pillar">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="7" cy="7" r="4"/>
+            <circle cx="7" cy="21" r="4"/>
+            <line x1="10.5" y1="7.8" x2="24" y2="20.2"/>
+            <line x1="10.5" y1="20.2" x2="24" y2="7.8"/>
+          </svg>
+        </div>
+        <div class="pillar-title">Classic Cuts</div>
+        <div class="pillar-body">Fades, tapers, line-ups and straight-razor finishes.</div>
+      </div>
+
+      <div class="about-pillar">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="22" height="20" rx="2"/>
+            <line x1="3" y1="11" x2="25" y2="11"/>
+            <line x1="9" y1="3" x2="9" y2="7"/>
+            <line x1="19" y1="3" x2="19" y2="7"/>
+            <polyline points="10,17 13,20 18,15"/>
+          </svg>
+        </div>
+        <div class="pillar-title">No Appointment</div>
+        <div class="pillar-body">Walk in any time. No booking app, no waitlist.</div>
+      </div>
+
+      <div class="about-pillar">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2 L24 6.5 L24 17.5 C24 23 19.5 27.5 14 29.5 C8.5 27.5 4 23 4 17.5 L4 6.5 Z"/>
+            <text x="14" y="21" font-size="7.5" text-anchor="middle" stroke="none" fill="currentColor" font-weight="700" font-family="sans-serif" letter-spacing="-0.5">60+</text>
+          </svg>
+        </div>
+        <div class="pillar-title">60+ Years Local</div>
+        <div class="pillar-body">Serving the same neighbourhood since the 1960s.</div>
+      </div>
+
+    </div>
+  </div>
+
 </section>
 
 <!-- ======================================================
@@ -663,7 +749,7 @@
 <section id="visit" class="visit">
   <div class="container">
     <div class="reveal-up">
-      <h2 class="visit-heading">Walk in.<br><em>We'll take it<span class="accent"> from there.</span></em></h2>
+      <h2 class="visit-heading">Walk in.<br><em>We'll take it<br><span class="accent">from there.</span></em></h2>
       <p class="visit-body">
         No booking system, no waitlist app.
         Walk through the door at 59 Willow Road any time we're open.
@@ -745,73 +831,61 @@
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-shell">
-      <div class="footer-brand-block">
-        <div class="footer-kicker">Willow Road Barber Shop</div>
-        <div class="footer-logo">
-          <img src="wrb.webp" alt="Willow Road Barber Shop" width="130" height="36" loading="lazy" />
-        </div>
-        <p class="footer-lede">Classic neighbourhood barbering in Guelph. Walk in sharp, leave sharper.</p>
-      </div>
 
-      <div class="footer-columns">
-        <div class="footer-panel">
-          <div class="footer-label">Visit</div>
-          <address class="footer-addr">
-            <a class="footer-address-link" href="https://www.google.com/maps/dir/?api=1&destination=59+Willow+Road+Guelph+Ontario" target="_blank" rel="noopener">59 Willow Road<br>Guelph, ON N1H 1W3</a>
-            <a class="footer-phone-link" href="tel:+15198215231">(519) 821-5231</a>
-          </address>
-        </div>
+      <!-- Main: brand anchor left / practical info right -->
+      <div class="footer-main">
 
-        <div class="footer-panel">
-          <div class="footer-label">Hours</div>
-          <div class="footer-hours">
-            <div><span>Tuesday - Friday</span><strong>8am - 6pm</strong></div>
-            <div><span>Saturday</span><strong>8am - 3pm</strong></div>
-            <div><span>Sunday - Monday</span><strong>Closed</strong></div>
+        <!-- LEFT: emotional anchor -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="wrb.webp" alt="Willow Road Barber Shop" width="130" height="36" loading="lazy" />
           </div>
+          <p class="footer-statement">Good cuts.<br>Honest prices.<br>No nonsense.</p>
         </div>
 
-        <div class="footer-panel footer-panel--social">
-          <div class="footer-label">Follow</div>
-          <div class="footer-social-copy">See fresh cuts, shop moments, and neighbourhood updates.</div>
-          <div class="footer-social" aria-label="Social media">
-            <a href="https://www.facebook.com/willow.road.barbershop" target="_blank" rel="noopener noreferrer" aria-label="Willow Road Barber on Facebook">
-              <span class="footer-social-name">Facebook</span>
-              <span class="footer-social-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor" focusable="false">
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                </svg>
-              </span>
-            </a>
-            <a href="https://www.instagram.com/willowroadbarber" target="_blank" rel="noopener noreferrer" aria-label="Willow Road Barber on Instagram">
-              <span class="footer-social-name">Instagram</span>
-              <span class="footer-social-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" focusable="false">
-                  <rect x="2" y="2" width="20" height="20" rx="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-                </svg>
-              </span>
-            </a>
+        <!-- RIGHT: practical information, quieter -->
+        <div class="footer-info">
+
+          <div class="footer-panel">
+            <div class="footer-label">Visit</div>
+            <address class="footer-addr">
+              <a class="footer-address-link" href="https://www.google.com/maps/dir/?api=1&destination=59+Willow+Road+Guelph+Ontario" target="_blank" rel="noopener">59 Willow Road<br>Guelph, ON&nbsp;N1H&nbsp;1W3</a>
+              <a class="footer-phone-link" href="tel:+15198215231">(519) 821-5231</a>
+            </address>
           </div>
+
+          <div class="footer-panel">
+            <div class="footer-label">Hours</div>
+            <div class="footer-hours">
+              <div><span>Tue – Fri</span><strong>8am – 6pm</strong></div>
+              <div><span>Saturday</span><strong>8am – 3pm</strong></div>
+              <div><span>Sun – Mon</span><strong>Closed</strong></div>
+            </div>
+          </div>
+
+          <div class="footer-panel">
+            <div class="footer-label">Follow</div>
+            <div class="footer-social-links" aria-label="Social media">
+              <a href="https://www.instagram.com/willowroadbarber" target="_blank" rel="noopener noreferrer" aria-label="Willow Road Barber on Instagram">Instagram ↗</a>
+              <a href="https://www.facebook.com/willow.road.barbershop" target="_blank" rel="noopener noreferrer" aria-label="Willow Road Barber on Facebook">Facebook ↗</a>
+            </div>
+          </div>
+
         </div>
       </div>
 
       <div class="footer-base">
         <p class="footer-copy">© 2026 Willow Road Barber Shop · Guelph, Ontario</p>
       </div>
+
     </div>
   </div>
 
-  <!-- ── Brinton Builds credit ──────────────────────────── -->
+  <!-- Brinton Builds credit -->
   <div class="bb-credit">
     <a href="https://brintonbuilds.ca" target="_blank" rel="noopener noreferrer"
        class="bb-credit-link" aria-label="Website by Brinton Builds">
       <span class="bb-credit-mark" aria-hidden="true">
-        <!--
-          BB logomark — simplified B-with-hammer glyph
-          Spine + hammer head + upper bowl + lower bowl (evenodd cutouts)
-        -->
         <svg viewBox="0 0 24 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M0 0h7v28H0z
@@ -924,6 +998,23 @@
         v.removeAttribute('autoplay');
         v.pause();
       });
+    }
+
+    // ── About: Polaroid settle animation ──────────────────────
+    var aboutCinema = document.querySelector('.about-cinema');
+    if (aboutCinema) {
+      if ('IntersectionObserver' in window && !prefersReducedMotion) {
+        var cinemaObs = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            aboutCinema.classList.add('about-cinema--placed');
+            obs.unobserve(aboutCinema);
+          });
+        }, { threshold: 0.12 });
+        cinemaObs.observe(aboutCinema);
+      } else {
+        aboutCinema.classList.add('about-cinema--placed');
+      }
     }
 
 
