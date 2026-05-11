@@ -452,7 +452,7 @@ a { color: inherit; text-decoration: none; }
 
 .hero-line--1 {
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
   color: rgba(255, 255, 255, 0.88);
   animation: hero-fade-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.32s forwards;
 }
@@ -1032,9 +1032,9 @@ a { color: inherit; text-decoration: none; }
   display: block;
   margin-top: 2px;
   font-size: clamp(66px, 8.8vw, 150px);
-  font-style: italic;
-  font-weight: 400;
-  color: rgba(244,237,227,0.58);
+  font-style: normal;
+  font-weight: 600;
+  color: rgba(244,237,227,0.52);
   text-shadow: 0 14px 34px rgba(0,0,0,0.18);
 }
 .gallery-title .accent {
@@ -2448,77 +2448,335 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================
-   TYPOGRAPHY UPGRADE — v3.1
-   Playfair Display headline system
+   TYPOGRAPHY SYSTEM — v3.2
+   Display:  Gloock (Canela-proximate, heritage serif)
+   UI/Sans:  Inter Tight (industrial, precise)
+   Button:   Roboto Condensed (direct, tactile)
+   → To upgrade to licensed Canela: swap --font-display value
    ============================================ */
 
-/* Token: swap display serif from Cormorant Garamond to Playfair Display */
+/* ── Font tokens ───────────────────────────── */
 :root {
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Gloock', Georgia, serif;
+  --font-ui:      'Inter Tight', 'Inter', Helvetica, Arial, sans-serif;
+  --font-button:  'Roboto Condensed', 'Inter Tight', sans-serif;
+  /* Legacy aliases — keeps all existing rules working */
+  --font-serif:   'Gloock', Georgia, serif;
+  --font-sans:    'Inter Tight', 'Inter', Helvetica, Arial, sans-serif;
 }
 
-/* Hero heading — cinematic scale & weight */
+/* ── Base body — Inter Tight throughout ────── */
+body {
+  font-family: var(--font-ui);
+  letter-spacing: -0.006em;
+}
+
+/* ── Hero heading ──────────────────────────── */
 .hero-heading {
-  font-size: clamp(56px, 7vw, 96px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: clamp(52px, 6.8vw, 90px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
 }
 
-/* Both lines unified to 600 — confidence over elegance */
 .hero-line--1 {
-  font-weight: 600;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.80);
 }
+
 .hero-line--2 {
-  font-weight: 600;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* Accent word ("sharp.") punches harder */
 .hero-heading .accent {
-  font-weight: 700;
+  font-weight: 400;
 }
 
-/* Section titles — Playfair Display at editorial scale */
+/* ── Hero quote — blunt statement, not a precious whisper ── */
+.hero-quote {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.52);
+  margin-bottom: 0.5em;
+}
+
+/* ── Hero stat numbers ─────────────────────── */
+.hero-stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(3.0rem, 5vw, 4.4rem);
+  font-weight: 400;
+  letter-spacing: -0.018em;
+}
+
+/* ── Section titles ────────────────────────── */
 .section-title {
-  font-size: clamp(44px, 5vw, 68px);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 4.6vw, 62px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+  margin-top: 18px;
 }
 
-/* Eyebrow / section labels — tighten tracking slightly */
+/* ── Gallery title ─────────────────────────── */
+.gallery-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+/* ── Visit heading ─────────────────────────── */
+.visit-heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+.visit-heading em {
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(28, 23, 20, 0.40);
+}
+
+/* ── Eyebrow labels — precise, industrial ──── */
 .eyebrow {
-  font-size: 12px;
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 600;
   letter-spacing: 0.22em;
 }
 
-/* Category headings — strong sans anchors, not decorative serif */
+/* ── Navigation ────────────────────────────── */
+.header-nav a {
+  font-family: var(--font-ui);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+/* ── Service category labels ───────────────── */
 .svc-group-title {
-  font-family: var(--font-sans);
-  font-size: 28px;
+  font-family: var(--font-ui);
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.22em;
   line-height: 1;
-  margin-bottom: 28px;
+  margin-bottom: 0;
+  padding-bottom: 18px;
   border-bottom: 1px solid var(--border);
-  padding-bottom: 20px;
-  font-optical-sizing: normal;
 }
 
-/* Price list — service names: readable weight, not thin */
+/* ── Service names ─────────────────────────── */
 .svc-name {
-  font-size: 18px;
-  font-weight: 500;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.003em;
 }
 
-/* Price list — amounts: switch to bold sans, drop serif opacity */
+/* ── Service prices — Inter Tight SemiBold, direct and scannable ── */
 .svc-price {
-  font-family: var(--font-sans);
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0;
+  font-family: var(--font-ui);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   opacity: 1;
+}
+
+/* ── Services note values (Cash Only / Walk-In Only) ── */
+.services-note-value {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+/* ── Testimonials rating number ────────────── */
+.testimonials-rating-num {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+/* ── Detail labels ─────────────────────────── */
+.detail-label {
+  font-family: var(--font-ui);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+/* ── Buttons — Roboto Condensed, direct and physical ── */
+.btn-primary {
+  font-family: var(--font-button);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+}
+
+.btn-ghost {
+  font-family: var(--font-button);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+}
+
+.header-cta {
+  font-family: var(--font-button);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+}
+
+.mobile-bar a {
+  font-family: var(--font-button);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.gallery-more-btn {
+  font-family: var(--font-button);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.testi-review-cta {
+  font-family: var(--font-button);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+}
+
+/* ── Footer labels ─────────────────────────── */
+.footer-kicker,
+.footer-label,
+.footer-social-name {
+  font-family: var(--font-ui);
+}
+
+/* ── About section — photographic composition ──────── */
+
+/* Left column is taller now — align text to top */
+.about .container {
+  align-items: start;
+}
+
+/* Wrap: two-row photo grid */
+.about-img-wrap {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+/* Suppress the old ::after on the wrap */
+.about-img-wrap::after {
+  display: none;
+}
+
+/* Primary interior — unchanged film treatment */
+.about-img-main {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-img-main img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: top center;
+  filter: brightness(0.82) saturate(0.72);
+  display: block;
+}
+
+/* Decorative offset border — moved from wrap to main image */
+.about-img-main::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 48%;
+  height: 44%;
+  border: 1px solid rgba(20,15,10,0.14);
+  pointer-events: none;
+}
+
+/* Portrait pair — side by side below the interior */
+.about-img-pair {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 10px;
+}
+
+.about-portrait {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Consistent height across both portraits */
+.about-portrait img {
+  width: 100%;
+  height: clamp(180px, 22vw, 260px);
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-portrait img { transition: none; }
+}
+
+.about-portrait:hover img {
+  transform: scale(1.022);
+}
+
+/* Tarun — B&W, cinematic, atmospheric */
+.about-portrait--tarun img {
+  object-position: center top;
+  filter: brightness(0.86) saturate(0.10) contrast(1.04);
+}
+
+/* Ricky — at work, documentary warmth, customer in frame */
+.about-portrait--ricky img {
+  object-position: 50% 25%;
+  filter: brightness(0.84) saturate(0.62);
+}
+
+/* Mobile — keep pair side by side, shorter */
+@media (max-width: 800px) {
+  .about-img-main::after { display: none; }
+  .about-portrait img {
+    height: clamp(130px, 24vw, 190px);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img-wrap  { gap: 6px; }
+  .about-img-pair  { gap: 6px; }
+}
+
+/* ── Services section — heading & spacing polish ── */
+
+/* Tighten gap between headline and pricing rows */
+.services .section-head {
+  margin-bottom: clamp(32px, 3.2vw, 42px);
+}
+
+/* Three-line composition: "Honest Prices / Have a Seat, / Handsome." */
+.services .section-title {
+  line-height: 1.12;
+}
+
+/* "Handsome." — its own line, charming accent not a shout */
+.services .section-title .accent {
+  display: block;
+  font-size: 0.88em;
+  letter-spacing: -0.008em;
 }
 
 /* ============================================
@@ -2537,23 +2795,18 @@ a { color: inherit; text-decoration: none; }
 /* Heading — three-part stacked rhythm */
 .visit-heading {
   color: #1c1714;
+  line-height: 0.86;
+  text-wrap: initial; /* explicit <br>s control all three breaks */
 }
 
-/* "Come" — bold serif anchor */
-.visit-line-come {
-  display: block;
-  font-weight: 700;
-  color: #1c1714;
-}
-
-/* "Find" — italic, stepped back */
+/* Second line — grey, Gloock 400 (no synthesis) */
 .visit-heading em {
-  font-style: italic;
+  font-style: normal;
   color: rgba(28,23,20,0.46);
   font-weight: 400;
 }
 
-/* "Us." — brand red */
+/* Third line — brand red */
 .visit-heading .accent {
   color: #b32626;
 }
@@ -2617,6 +2870,602 @@ a { color: inherit; text-decoration: none; }
 }
 .visit .detail-val a:hover {
   color: #b32626;
+}
+
+/* ============================================
+   TESTIMONIALS — Atmospheric depth layer
+   ============================================ */
+
+/* Section needs a stacking context to contain the ghost mark */
+.testimonials {
+  position: relative;
+  overflow: hidden;
+}
+
+/*
+  Ghost quotation mark — oversized, barely perceptible.
+  Sits in the right half of the section, partially cropped,
+  behind all card content. Users should feel it, not notice it.
+*/
+.testimonials::before {
+  content: '\201C';
+  position: absolute;
+  right: -0.06em;
+  top: 44%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(300px, 40vw, 540px);
+  line-height: 0.75;
+  color: rgba(238, 232, 223, 0.045);
+  font-weight: 400;
+  letter-spacing: 0;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  font-style: normal;
+}
+
+/* All section content floats above the ghost layer */
+.testimonials > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Featured card — fully transparent, no border, no shadow, no box */
+.testi-featured {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Decorative opening quote on featured card — pulled back further */
+.testi-featured::before {
+  opacity: 0.10;
+}
+
+/* Supporting grid — clean spacing, no border-gap technique */
+.testi-grid {
+  background: transparent;
+  gap: clamp(20px, 2.5vw, 32px);
+  margin-top: 0;
+  border-bottom: none;
+}
+
+/* Supporting cards — fully transparent */
+.testi-card {
+  background: transparent;
+}
+
+/* Google Reviews CTA — remove golden glow pill, clean neutral link */
+.testi-review-cta {
+  border-radius: 0;
+  border: 1px solid rgba(238, 232, 223, 0.14);
+  background: transparent;
+  box-shadow: none;
+  letter-spacing: 0.12em;
+}
+
+.testi-review-cta:hover {
+  transform: none;
+  border-color: rgba(238, 232, 223, 0.30);
+  box-shadow: none;
+  background: transparent;
+  color: var(--fg);
+}
+
+/* Mobile — ghost mark scaled back, slightly more transparent */
+@media (max-width: 680px) {
+  .testimonials::before {
+    font-size: clamp(160px, 48vw, 260px);
+    color: rgba(238, 232, 223, 0.028);
+    top: 50%;
+    right: -0.10em;
+  }
+}
+
+/* ============================================
+   ABOUT v2 — Cinematic Polaroid Wall
+   ============================================ */
+
+/* Section shell — full-bleed two-column split, no container */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-block: 0;
+  background: none;
+  border-top: 1px solid rgba(20,15,10,0.10);
+  overflow: hidden;
+}
+
+/* ── Left: dark cinema panel ─────────────────── */
+.about-cinema {
+  position: relative;
+  overflow: hidden;
+  background: #0d0a08;
+  min-height: clamp(560px, 88vh, 1020px);
+}
+
+/* Shop interior fills the full panel */
+.about-wall {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.about-wall-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(0.32) saturate(0.50) contrast(1.10);
+  display: block;
+}
+
+/* Warm cinematic gradient overlay */
+.about-cinema::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    158deg,
+    rgba(26, 10, 3, 0.50) 0%,
+    rgba(10, 5, 1, 0.18) 55%,
+    rgba(6, 2, 0, 0.42) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Bottom vignette — grounding the composition */
+.about-cinema::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 28%;
+  background: linear-gradient(to top, rgba(6,3,1,0.70) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Polaroid base ─────────────────────────────── */
+.about-polaroid {
+  position: absolute;
+  z-index: 2;
+  background: #f4f0e6;
+  padding: 9px 9px 44px;
+  box-shadow:
+    0 12px 44px rgba(0,0,0,0.65),
+    0 3px 12px rgba(0,0,0,0.38);
+}
+
+/* Tape strip — warm beige, semi-transparent, restrained */
+.about-polaroid::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 52px;
+  height: 17px;
+  background: rgba(208,186,130,0.54);
+  z-index: 3;
+}
+
+.about-polaroid--tarun::before {
+  transform: translateX(-50%) rotate(-3deg);
+  width: 58px;
+}
+
+.about-polaroid--ricky::before {
+  transform: translateX(-62%) rotate(4deg);
+  left: 56%;
+  width: 48px;
+}
+
+/* Photo inside polaroid */
+.about-polaroid-photo {
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.about-polaroid-photo img {
+  display: block;
+  width: 100%;
+  height: clamp(150px, 19vw, 260px);
+  object-fit: cover;
+}
+
+/* Label under photo — inside the white border */
+.about-polaroid-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 8px;
+  padding-left: 3px;
+}
+
+.about-polaroid-name {
+  font-family: 'Caveat', Georgia, cursive;
+  font-size: clamp(17px, 1.8vw, 22px);
+  color: #261a10;
+  line-height: 1;
+  display: block;
+}
+
+.about-polaroid-role {
+  font-family: var(--font-ui);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: rgba(38,26,16,0.52);
+  margin-top: 4px;
+  display: block;
+}
+
+/* ── Polaroid positions ─────────────────────────── */
+
+/* Tarun — larger, upper-left, slight CCW tilt */
+.about-polaroid--tarun {
+  width: clamp(150px, 50%, 268px);
+  left: 6%;
+  top: 7%;
+  transform: rotate(-3.5deg);
+}
+
+.about-polaroid--tarun .about-polaroid-photo img {
+  filter: brightness(0.88) saturate(0.08) contrast(1.07);
+  object-position: center top;
+}
+
+/* Ricky — slightly smaller, lower center, CW tilt, overlapping Tarun */
+.about-polaroid--ricky {
+  width: clamp(132px, 45%, 240px);
+  left: 33%;
+  top: 43%;
+  transform: rotate(2.5deg);
+}
+
+.about-polaroid--ricky .about-polaroid-photo img {
+  filter: brightness(0.88) saturate(0.65);
+  object-position: 50% 18%;
+}
+
+/* ── Handwritten annotations ─────────────────────── */
+.about-annot {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-annot-text {
+  font-family: 'Caveat', Georgia, cursive;
+  font-size: clamp(14px, 1.6vw, 19px);
+  color: rgba(248,238,215,0.80);
+  line-height: 1.38;
+  margin: 0;
+  font-weight: 400;
+}
+
+.about-annot-text em {
+  font-style: normal;
+  color: #c94040;
+}
+
+.about-annot-arrow {
+  display: block;
+  margin-top: 5px;
+  color: rgba(248,238,215,0.40);
+}
+
+/* Tarun annotation — anchored inside the Tarun polaroid, tracks it at any width */
+.about-annot--tarun {
+  position: absolute;
+  left: calc(100% + 14px);
+  top: 26%;
+  width: 110px;
+}
+
+/* Ricky annotation — left of Ricky's photo, cinema-relative */
+.about-annot--ricky {
+  top: 55%;
+  left: 18%;
+}
+
+/* ── Right: editorial copy panel ─────────────────── */
+.about-copy {
+  background: #f3efe6;
+  color: #16110d;
+  padding: clamp(56px, 7vw, 108px) clamp(36px, 5.5vw, 88px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: radial-gradient(ellipse 80% 60% at 0% 50%, rgba(100,15,15,0.022) 0%, transparent 60%);
+}
+
+/* Pillar grid — 2-column with icons */
+.about-pillars {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.about-pillar {
+  padding: 20px 20px 20px 0;
+}
+
+.about-pillar:nth-child(2n) {
+  padding-left: 20px;
+}
+
+.pillar-icon {
+  color: #b32626;
+  margin-bottom: 10px;
+}
+
+.pillar-icon svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+/* ── Settle-in animation ─────────────────────────── */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* Pre-settle: photos are invisible and displaced */
+  .about-polaroid--tarun {
+    opacity: 0;
+    transform: rotate(-7deg) translateY(-26px) translateX(-6px);
+    transition:
+      opacity 0.60s ease-out,
+      transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .about-polaroid--ricky {
+    opacity: 0;
+    transform: rotate(6deg) translateY(22px) translateX(6px);
+    transition:
+      opacity 0.60s ease-out 0.26s,
+      transform 0.72s cubic-bezier(0.22, 1, 0.36, 1) 0.26s;
+  }
+
+  .about-annot {
+    opacity: 0;
+    transition: opacity 0.48s ease-out 0.60s;
+  }
+
+  /* Placed: photos settle into final rotation and position */
+  .about-cinema.about-cinema--placed .about-polaroid--tarun {
+    opacity: 1;
+    transform: rotate(-3.5deg) translateY(0) translateX(0);
+  }
+
+  .about-cinema.about-cinema--placed .about-polaroid--ricky {
+    opacity: 1;
+    transform: rotate(2.5deg) translateY(0) translateX(0);
+  }
+
+  .about-cinema.about-cinema--placed .about-annot {
+    opacity: 1;
+  }
+}
+
+/* No-motion: immediately visible */
+@media (prefers-reduced-motion: reduce) {
+  .about-polaroid--tarun,
+  .about-polaroid--ricky,
+  .about-annot {
+    opacity: 1;
+  }
+}
+
+/* ── Responsive ──────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .about-polaroid--tarun  { width: clamp(130px, 46%, 230px); }
+  .about-polaroid--ricky  { width: clamp(116px, 42%, 208px); }
+  .about-annot-text       { font-size: clamp(13px, 1.5vw, 17px); }
+}
+
+@media (max-width: 800px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cinema {
+    min-height: 66vw;
+    max-height: 460px;
+    order: -1;
+  }
+
+  .about-polaroid--tarun {
+    width: clamp(116px, 37vw, 190px);
+    left: 4%;
+    top: 8%;
+  }
+
+  .about-polaroid--ricky {
+    width: clamp(104px, 33vw, 170px);
+    left: 35%;
+    top: 40%;
+  }
+
+  .about-annot { display: none; }
+
+  .about-copy {
+    padding: clamp(40px, 8vw, 60px) clamp(24px, 6vw, 48px);
+  }
+
+  .about-pillars {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 440px) {
+  .about-cinema { min-height: 74vw; }
+
+  .about-polaroid--tarun {
+    width: 40vw;
+    left: 3%;
+    top: 6%;
+  }
+
+  .about-polaroid--ricky {
+    width: 36vw;
+    left: 38%;
+    top: 42%;
+  }
+
+  .about-pillar { padding-right: 12px; }
+  .about-pillar:nth-child(2n) { padding-left: 12px; }
+}
+
+/* ============================================
+   FOOTER v2 — Cinematic closing
+   ============================================ */
+
+/* Enhanced background: bottom-left warmth + existing top glow */
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(64px, 7vw, 96px) 0 0;
+  background:
+    radial-gradient(ellipse 55% 45% at 4% 96%, rgba(100,22,10,0.09) 0%, transparent 65%),
+    radial-gradient(ellipse 120% 90% at 50% 0%, rgba(124,24,24,0.13) 0%, rgba(9,8,10,0) 55%),
+    linear-gradient(180deg, #0c0a0b 0%, #090708 100%);
+}
+
+/* Grain overlay — barely perceptible film texture */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.030;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Lift all content above grain */
+.site-footer > .container,
+.site-footer > .bb-credit {
+  position: relative;
+  z-index: 1;
+}
+
+/* Shell: vertical stack with generous rhythm */
+.footer-shell {
+  display: grid;
+  gap: clamp(44px, 5.5vw, 68px);
+}
+
+/* Main: brand left / info right */
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+}
+
+/* LEFT: logo + closing brand statement */
+.footer-brand {
+  display: grid;
+  gap: clamp(24px, 2.8vw, 38px);
+  align-content: start;
+}
+
+/* Closing statement — Gloock, large, warm off-white */
+.footer-statement {
+  font-family: var(--font-display);
+  font-size: clamp(25px, 2.8vw, 40px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.018em;
+  color: rgba(238, 232, 223, 0.84);
+  margin: 0;
+}
+
+/* RIGHT: three practical panels */
+.footer-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: clamp(16px, 2vw, 32px);
+  align-items: start;
+}
+
+/* Social — plain text links, no boxes */
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-social-links a {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(238,232,223,0.44);
+  text-decoration: none;
+  transition: color 0.22s ease;
+  display: block;
+}
+
+.footer-social-links a:hover {
+  color: rgba(238,232,223,0.86);
+}
+
+/* Base row: copyright */
+.footer-base {
+  padding-top: clamp(20px, 2.5vw, 30px);
+  border-top: 1px solid rgba(238,232,223,0.06);
+  padding-bottom: 0;
+}
+
+/* BB credit — subtler, sits cleanly at the base */
+.site-footer .bb-credit {
+  margin-top: 0;
+  padding-top: 16px;
+  padding-bottom: clamp(20px, 3vw, 28px);
+  border-top: none;
+}
+
+/* Tablet: info collapses to 2 columns */
+@media (max-width: 960px) {
+  .footer-info {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* Mobile: full stack */
+@media (max-width: 680px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: clamp(36px, 8vw, 52px);
+  }
+
+  .footer-info {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 20px;
+  }
+
+  .footer-statement {
+    font-size: clamp(23px, 6.5vw, 32px);
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-info {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
 }
 
 /* ============================================
