@@ -58,7 +58,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Gloock&family=Inter+Tight:wght@400;500;600;700&family=Roboto+Condensed:wght@600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="willow-v2.css?v=20260510-footer" />
+  <link rel="stylesheet" href="willow-v2.css?v=20260510-mobile-fix" />
 
   <!-- ── Structured Data: LocalBusiness / BarberShop ─────────── -->
   <script type="application/ld+json">
@@ -325,15 +325,15 @@
   <div class="gallery-band reveal-up reveal-delay-1" id="galleryPrimary">
     <div class="gallery-grid gallery-grid--impact">
 
-      <!-- 1 — wide: barber mid-cut action (craft moment) -->
+      <!-- 1 — mullet haircut portrait -->
       <figure class="g-item g-item--clickable" tabindex="0" role="button"
-              aria-label="Open image: Barber at work">
-        <img src="images/barber-cutting-hair-willow-road-barbershop-guelph.webp"
-             alt="Barber cutting a customer's hair at Willow Road Barber Shop in Guelph"
+              aria-label="Open image: Men's mullet haircut">
+        <img src="images/mens-mullet-haircut-willow-road-barbershop.webp"
+             alt="Men's mullet haircut at Willow Road Barber Shop in Guelph"
              loading="lazy" />
       </figure>
 
-      <!-- 2 — tall portrait: kids low taper fade (required) -->
+      <!-- 2 — tall portrait: kids low taper fade -->
       <figure class="g-item g-item--clickable" tabindex="0" role="button"
               aria-label="Open image: Kids low taper fade haircut">
         <picture>
@@ -344,31 +344,15 @@
         </picture>
       </figure>
 
-      <!-- 3 — wide: mullet haircut portrait -->
+      <!-- 3 — slick-back and beard -->
       <figure class="g-item g-item--clickable" tabindex="0" role="button"
-              aria-label="Open image: Men's mullet haircut">
-        <img src="images/mens-mullet-haircut-willow-road-barbershop.webp"
-             alt="Men's mullet haircut at Willow Road Barber Shop in Guelph"
+              aria-label="Open image: Men's slick-back and beard">
+        <img src="images/mens-senior-slickback-beard-guelph.webp"
+             alt="Distinguished men's slick-back and beard trim at Willow Road Barber Shop in Guelph"
              loading="lazy" />
       </figure>
 
-      <!-- 4 — skin fade clean finish -->
-      <figure class="g-item g-item--clickable" tabindex="0" role="button"
-              aria-label="Open image: Men's skin fade haircut">
-        <img src="images/mens-skin-fade-willow-road-barbershop-guelph.webp"
-             alt="Men's skin fade haircut at Willow Road Barber Shop in Guelph"
-             loading="lazy" />
-      </figure>
-
-      <!-- 5 — barber at work portrait (skill and craft) -->
-      <figure class="g-item g-item--clickable" tabindex="0" role="button"
-              aria-label="Open image: Ricky the barber at work">
-        <img src="images/barber-ricky-at-work-willow-road-barbershop.webp"
-             alt="Ricky the barber at work at Willow Road Barber Shop in Guelph"
-             loading="lazy" />
-      </figure>
-
-      <!-- 6 — wide: beard taper and slickback (beard work variety) -->
+      <!-- 4 — beard taper and slickback -->
       <figure class="g-item g-item--clickable" tabindex="0" role="button"
               aria-label="Open image: Men's beard taper and slickback">
         <img src="images/mens-beard-taper-slickback-guelph.webp"
@@ -376,7 +360,7 @@
              loading="lazy" />
       </figure>
 
-      <!-- 7 — kids textured mullet with precision hair design -->
+      <!-- 5 — kids textured mullet with precision hair design -->
       <figure class="g-item g-item--clickable" tabindex="0" role="button"
               aria-label="Open image: Kids' textured mullet with hair design">
         <img src="images/kids-textured-mullet-hair-design-guelph.webp"
@@ -384,11 +368,27 @@
              loading="lazy" />
       </figure>
 
-      <!-- 8 — modern mullet side profile -->
+      <!-- 6 — modern mullet side profile -->
       <figure class="g-item g-item--clickable" tabindex="0" role="button"
               aria-label="Open image: Modern mullet side profile">
         <img src="images/mens-modern-mullet-willow-road-barbershop.webp"
              alt="Men's modern mullet haircut side profile at Willow Road Barber Shop in Guelph"
+             loading="lazy" />
+      </figure>
+
+      <!-- 7 — classic fade with full beard -->
+      <figure class="g-item g-item--clickable" tabindex="0" role="button"
+              aria-label="Open image: Men's classic fade with full beard">
+        <img src="images/mens-classic-fade-full-beard-guelph.webp"
+             alt="Men's classic fade with full beard at Willow Road Barber Shop in Guelph"
+             loading="lazy" />
+      </figure>
+
+      <!-- 8 — undercut slick-back fade -->
+      <figure class="g-item g-item--clickable" tabindex="0" role="button"
+              aria-label="Open image: Men's undercut slick-back fade">
+        <img src="images/mens-undercut-slickback-fade-guelph.webp"
+             alt="Men's undercut slick-back fade at Willow Road Barber Shop in Guelph"
              loading="lazy" />
       </figure>
 
@@ -399,7 +399,7 @@
   <div class="gallery-expand-row reveal-up reveal-delay-2">
     <button class="gallery-more-btn" id="galleryMoreBtn"
             aria-expanded="false" aria-controls="gallerySecondary">
-      <span class="gallery-more-label">View More Work</span>
+      <span class="gallery-more-label">More Cuts</span>
       <span class="gallery-more-icon" aria-hidden="true">
         <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
              stroke="currentColor" stroke-width="1.6"
@@ -424,9 +424,9 @@
       </figure>
 
       <figure class="g-item g-item--clickable" tabindex="0" role="button"
-              aria-label="Open image: Men's slick-back and beard">
-        <img src="images/mens-senior-slickback-beard-guelph.webp"
-             alt="Distinguished men's slick-back and beard trim at Willow Road Barber Shop in Guelph"
+              aria-label="Open image: Men's skin fade haircut">
+        <img src="images/mens-skin-fade-willow-road-barbershop-guelph.webp"
+             alt="Men's skin fade haircut at Willow Road Barber Shop in Guelph"
              loading="lazy" />
       </figure>
 
@@ -582,7 +582,7 @@
 
   <!-- RIGHT: editorial content panel -->
   <div class="about-copy reveal-up reveal-delay-1">
-    <h2 class="section-title">Guelph's Classic<br><span class="accent">Barber Shop.</span></h2>
+    <h2 class="section-title">Guelph's Classic<br><span class="accent">Barber Shop</span></h2>
     <div class="about-body">
       <p>
         Formerly known as Carlos Barber Shop, Willow Road has been a fixture
@@ -661,7 +661,7 @@
     <!-- Section header -->
     <div class="section-head reveal-up">
       <p class="eyebrow">Client Reviews</p>
-      <h2 class="section-title">Why Guelph Trusts<br><span class="accent">Willow Road.</span></h2>
+      <h2 class="section-title">Why Guelph Trusts<br><span class="accent">Willow Road</span></h2>
       <div class="testimonials-meta" aria-label="4.9 average on Google Reviews">
         <a class="testimonials-rating testimonials-rating--link" href="https://www.google.com/search?sca_esv=b2645f01ee3a3dc1&sxsrf=ANbL-n4sOeBATrkxTKhN3M0EsgHSBQbiew:1776912337131&si=AL3DRZHrmvnFAVQPOO2Bzhf8AX9KZZ6raUI_dT7DG_z0kV2_x6CsO5U5V0QRDn8jNfIKD50cDJ-zj-R7piUgAYaaMro2BWD90yPa4YGv5ewppt0dctryQ_CoGE8zx_gtVVtLQD-m3owsjeQFWpUQc6H4Ujsy-bI2VA%3D%3D&q=Willow+Road+Barber+Shop+Reviews&sa=X&ved=2ahUKEwijhpul-oKUAxXtiSsGHbiJBhcQ0bkNegQIKxAH&biw=2148&bih=814&dpr=1" target="_blank" rel="noopener" aria-label="Read Willow Road Barber Shop Google reviews">
           <span class="testimonials-rating-num">4.9</span>
@@ -948,7 +948,7 @@
           secondary.classList.remove('is-open');
           secondary.setAttribute('aria-hidden', 'true');
           moreBtn.setAttribute('aria-expanded', 'false');
-          moreBtn.querySelector('.gallery-more-label').textContent = 'View More Work';
+          moreBtn.querySelector('.gallery-more-label').textContent = 'More Cuts';
         } else {
           secondary.classList.add('is-open');
           secondary.setAttribute('aria-hidden', 'false');

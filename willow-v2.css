@@ -3276,8 +3276,8 @@ body {
   }
 
   .about-cinema {
-    min-height: 66vw;
-    max-height: 460px;
+    min-height: clamp(300px, 90vw, 480px);
+    max-height: none;
     order: -1;
   }
 
@@ -3290,7 +3290,7 @@ body {
   .about-polaroid--ricky {
     width: clamp(104px, 33vw, 170px);
     left: 35%;
-    top: 40%;
+    top: 28%;
   }
 
   .about-annot { display: none; }
@@ -3306,7 +3306,7 @@ body {
 }
 
 @media (max-width: 440px) {
-  .about-cinema { min-height: 74vw; }
+  .about-cinema { min-height: clamp(290px, 94vw, 360px); }
 
   .about-polaroid--tarun {
     width: 40vw;
@@ -3317,7 +3317,7 @@ body {
   .about-polaroid--ricky {
     width: 36vw;
     left: 38%;
-    top: 42%;
+    top: 30%;
   }
 
   .about-pillar { padding-right: 12px; }
